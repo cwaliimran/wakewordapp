@@ -114,6 +114,7 @@
             android:id="@+id/wake_word_spinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_marginBottom="32dp"
             android:padding="16dp"
             android:spinnerMode="dialog"

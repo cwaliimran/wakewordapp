@@ -33,7 +33,7 @@ class ListenerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mViewModel.dictionaryList.observe(requireActivity(), { list: List<String?>? ->
+        mViewModel.dictionaryList.observe(requireActivity()) { list: List<String?>? ->
             if (list == null) {
                 Log.e(TAG, "onViewCreated: list is null")
                 val arrayAdapter = ArrayAdapter(
@@ -63,7 +63,7 @@ class ListenerFragment : Fragment() {
 
             // FIXME pt2 - if you uncomment this the spinner doesn't show the wake word
             mBinding.wakeWordSpinner.setSelection(list.indexOf(mViewModel.wakeWord.get()), false)
-        })
+        }
         mBinding.seekbar.progress = mViewModel.sensitivity.get()
         mBinding.seekbar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {

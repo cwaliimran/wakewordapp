@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ZamZam</string>
+    <string name="app_name">Chirp Note</string>
     <string name="default_wake_word"></string>
     <string name="seek_bar_title">Sensitivity:</string>
     <string name="return_label">Go Back</string>
